@@ -6,7 +6,7 @@
 /*   By: gbaud <gbaud@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/01 11:26:31 by gbaud             #+#    #+#             */
-/*   Updated: 2021/02/08 10:01:00 by gbaud            ###   ########lyon.fr   */
+/*   Updated: 2021/02/11 11:39:56 by gbaud            ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,14 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <string>
+#include <fcntl.h>
+#include <dirent.h>
+#include <string.h>
+#include <signal.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <time.h>
+#include <iostream>
 
 typedef int	t_boolean;
 # define TRUE 1

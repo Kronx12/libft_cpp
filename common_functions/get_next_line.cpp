@@ -63,9 +63,9 @@ int		get_next_line(int fd, char **line)
 	int			r;
 
 	if (fd < 0 || line == NULL || BUFFER_SIZE <= 0)
-		return (-1);
-	if (!(*line = ft_strfdup("", -1, 0)))
-		return (-1);
+		return (-2);
+	if (!(*line = ft_strfdup(std::string("").c_str(), -1, 0)))
+		return (-3);
 	ft_bzero(buffer, BUFFER_SIZE + 1);
 	if ((r = check_save(fd, line, save)) != 0)
 		return (r);

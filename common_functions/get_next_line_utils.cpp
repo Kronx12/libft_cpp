@@ -6,7 +6,7 @@
 /*   By: gbaud <gbaud@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/01 02:08:26 by gbaud             #+#    #+#             */
-/*   Updated: 2021/02/11 11:11:52 by gbaud            ###   ########lyon.fr   */
+/*   Updated: 2021/02/11 11:27:35 by gbaud            ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int		ft_strslen(char *str)
 	return (i);
 }
 
-char	*ft_strfdup(char *src, int n, int f)
+char	*ft_strfdup(const char *src, int n, int f)
 {
 	int		i;
 	char	*src2;
@@ -45,6 +45,6 @@ char	*ft_strfdup(char *src, int n, int f)
 			src2[i] = src[i];
 	}
 	if (!(src2[i] = '\0') && f == 1)
-		free(src);
+		free(const_cast<char *>(src));
 	return (src2);
 }
