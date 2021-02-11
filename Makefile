@@ -31,6 +31,8 @@ SRCS=./allocations/ft_bzero.cpp \
 	 ./converters/ft_atoi.cpp \
 	 ./converters/ft_ctos.cpp \
 	 ./converters/ft_itoa.cpp \
+	 ./common_functions/get_next_line.cpp \
+	 ./common_functions/get_next_line_utils.cpp \
 	 ./list_functions/ft_free_strs.cpp \
 	 ./list_functions/ft_free_strs_tab.cpp \
 	 ./list_functions/ft_lstnew_bonus.cpp \
