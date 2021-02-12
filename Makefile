@@ -29,6 +29,7 @@ SRCS=./allocations/ft_bzero.cpp \
 	 ./checker/ft_min.cpp \
 	 ./checker/ft_max.cpp \
 	 ./converters/ft_atoi.cpp \
+	 ./converters/ft_atoi_base.cpp \
 	 ./converters/ft_ctos.cpp \
 	 ./converters/ft_itoa.cpp \
 	 ./common_functions/get_next_line.cpp \
