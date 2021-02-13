@@ -6,7 +6,7 @@
 /*   By: gbaud <gbaud@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/01 11:26:31 by gbaud             #+#    #+#             */
-/*   Updated: 2021/02/11 11:39:56 by gbaud            ###   ########lyon.fr   */
+/*   Updated: 2021/02/13 11:14:06 by gbaud            ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,6 +99,7 @@ void				ft_lstremove_if(t_list **head, void *value,
 ** Converters Section
 */
 
+int					ft_atoi_base(char *str, char *base);
 int					ft_atoi(const char *nptr);
 char				*ft_itoa(int n1);
 char				*ft_ctos(char c);
