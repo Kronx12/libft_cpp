@@ -6,22 +6,12 @@
 /*   By: gbaud <gbaud@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/12 16:38:50 by gbaud             #+#    #+#             */
-/*   Updated: 2021/02/12 17:51:54 by gbaud            ###   ########lyon.fr   */
+/*   Updated: 2021/02/13 11:13:47 by gbaud            ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 
 #include "../libft.hpp"
-
-int		ft_strlen(char *str)
-{
-	int i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
 
 int		ft_check_base(char *base)
 {
