@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi_base.cpp                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gbaud <gbaud@student.42lyon.fr>            +#+  +:+       +#+        */
+/*   By: jdesbord <jdesbord@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/12 16:38:50 by gbaud             #+#    #+#             */
-/*   Updated: 2021/02/13 11:13:47 by gbaud            ###   ########lyon.fr   */
+/*   Updated: 2021/02/18 12:20:44 by jdesbord         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ int		ft_get_value(char *base, char c)
 			return (i);
 		i++;
 	}
-	return (0);
+	return (-1);
 }
 
 int		ft_atoi_base(char *str, char *base)
@@ -70,7 +70,10 @@ int		ft_atoi_base(char *str, char *base)
 	{
 		while (str[i])
 		{
-			val += (base_len * ft_get_value(base, str[i]));
+			if (ft_get_value(base, str[i]) == -1)
+				return(val);
+			val *= base_len;
+			val += ft_get_value(base, str[i]);
 			i++;
 		}
 		return (val);
