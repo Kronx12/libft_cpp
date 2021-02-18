@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_utils.cpp                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gbaud <gbaud@student.42lyon.fr>            +#+  +:+       +#+        */
+/*   By: jdesbord <jdesbord@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/01 02:08:26 by gbaud             #+#    #+#             */
-/*   Updated: 2021/02/11 11:27:35 by gbaud            ###   ########lyon.fr   */
+/*   Updated: 2021/02/18 10:47:56 by jdesbord         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,10 +41,10 @@ char	*ft_strfdup(const char *src, int n, int f)
 		if (!(src2 = (char *)ft_calloc(n + 1, 1)))
 			return (NULL);
 		i = -1;
-		while (++i < n)
+		while (++i < n && src[i])
 			src2[i] = src[i];
 	}
-	if (!(src2[i] = '\0') && f == 1)
+	if (!(src2[i] = '\0') && f == 1 && src)
 		free(const_cast<char *>(src));
 	return (src2);
 }
